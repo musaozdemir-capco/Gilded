@@ -67,12 +67,10 @@ public class LoginFunctionsStepDefinitions extends CommonMethods {
         Assert.assertTrue(dash.dashboradLogo.isDisplayed());
     }
 
-    @Then("verify that true message is displayed.")
-    public void verify_that_true_message_is_displayed() {
-        Assert.assertFalse(login.trueMessage.isDisplayed());
+    @Then("verify that {string} message is displayed.")
+    public void verify_that_message_is_displayed(String message) {
+       Assert.assertEquals(message,login.trueMessage.getText());
     }
-
-
 
 
 //----------------------------

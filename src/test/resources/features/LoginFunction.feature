@@ -8,8 +8,7 @@ Feature: login Functionality
 @error
    Scenario: verify true message is displayed
      When I enter username as "abcd" and password as "abcd"
-     And I click login button
-     Then verify that true message is displayed.
+     Then verify that "Invalid email" message is displayed.
 
   Scenario: Unsuccessful login with empty entries
     When I enter username as "" and password as ""
